@@ -153,7 +153,7 @@ const Form = () => {
             .then(data => {
                 // Process the fetched image first and then send the form
                 hide_loader();
-
+                console.log(data);
                 let code = data.code;
                 let msg = data.msg;
                 
