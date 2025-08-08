@@ -3,32 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import Nav from './Nav';
 
 const Submitted = () => {
-  const [url, setUrl] = useState(window.location.href);
-  const [user, setUser] = useState({
-    surname: "",
-    firstname: ""
-  });
-
-  //334712
-
-  useEffect(() => {
-    //split url 
-    let urlSplit = url.split("?");
-    let userData = urlSplit[1].split("_");
-
-    if (!urlSplit[1].includes("_")) {
-      setUser({
-        surname: "User1",
-        firstname: "Data1"
-      })
-    }
-    else {
-      setUser({
-        surname: userData[0],
-        firstname: userData[1]
-      })
-    }
-  }, []);
 
   return (
     <div>
