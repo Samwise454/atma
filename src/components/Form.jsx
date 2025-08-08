@@ -153,7 +153,7 @@ const Form = () => {
             .then(data => {
                 // Process the fetched image first and then send the form
                 hide_loader();
-                console.log(data);
+
                 let code = data.code;
                 let msg = data.msg;
                 
@@ -161,6 +161,11 @@ const Form = () => {
                     //success
                     //let's split msg
                     navigate('/Complete?'+data.msg);
+                    localStorage.clear("atma");
+                }
+                else if (code === "sw120") {
+                    //already submitted
+                    navigate('/Submitted');
                     localStorage.clear("atma");
                 }
                 else {

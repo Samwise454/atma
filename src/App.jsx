@@ -6,6 +6,7 @@
     import Form from './components/Form';
     import Complete from './components/Complete';
     import Expire from './components/Expire';
+    import Submitted from './components/Submitted';
     
 
     function App() {
@@ -16,6 +17,7 @@
           <Route path="/form" element={<Form />} />
           <Route path="/Complete" element={<Complete />} />
           <Route path="/Expire" element={<Expire />} />
+          <Route path="/Submitted" element={<Submitted />} />
           {/*
           
           <Route path="/Control" element={<Control />} />
